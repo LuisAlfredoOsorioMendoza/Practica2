@@ -6,7 +6,7 @@ $(document).ready(function () {
         let fechaNacimiento = $("#fechaNacimiento").val();
 
         if (!nombre || !apellidoP || !apellidoM || !fechaNacimiento) {
-            $("#rfc-output").text("⚠ Ingrese todos los datos correctamente").css("color", "red");
+            $("#rfc-output").text("⚠️ Ingrese todos los datos correctamente").css("color", "red");
             return;
         }
 
@@ -50,7 +50,7 @@ $(document).ready(function () {
         }
 
         $.ajax({
-            url: https://jsonplaceholder.typicode.com/users/${userId},
+            url: `https://jsonplaceholder.typicode.com/users/${userId}`,
             method: "GET",
             success: function (data) {
                 // Verificar que los datos existen antes de asignarlos
