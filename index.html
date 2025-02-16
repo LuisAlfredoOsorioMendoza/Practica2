@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de RFC y API REST</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de RFC y API REST</h1>
+
+        <section id="rfc-section">
+            <h2>Generador de RFC</h2>
+            <form id="rfc-form">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="text" id="apellidoP" placeholder="Apellido Paterno" required>
+                <input type="text" id="apellidoM" placeholder="Apellido Materno" required>
+                <input type="date" id="fechaNacimiento" required>
+                <button type="button" id="generate-rfc">Generar RFC</button>
+            </form>
+            <p id="rfc-result">RFC Generado: <span id="rfc-output">---</span></p>
+        </section>
+
+        <section id="api-section">
+            <h2>Consulta API REST</h2>
+            <input type="number" id="user-id" placeholder="Ingrese ID del usuario (1-10)" min="1" max="10">
+            <button id="fetch-user">Consultar Usuario</button>
+            <div id="user-info">
+                <p><strong>Nombre:</strong> <span id="user-name">-</span></p>
+                <p><strong>Email:</strong> <span id="user-email">-</span></p>
+                <p><strong>Ciudad:</strong> <span id="user-city">-</span></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script> <!-- Corregido el nombre del script -->
+</body>
+</html>
